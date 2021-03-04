@@ -2,10 +2,17 @@ import React, { memo } from 'react';
 import { Grid, Skeleton } from '../../../components';
 import Card from './Card';
 
-function Board({ data }) {
+interface elements {
+  data?: any;
+  value?: any;
+}
+
+function Board({ data }:elements) {
   const { cases, todayDeaths, recovered, deaths, todayCases } = data;
 
-  const getValue = (value) => value ? value : <Skeleton variant="text" width={182} height={60} />
+  const getValue = (value: any) => {
+    return value ? value : <Skeleton variant="text" width={182} height={60} />;
+  }
 
   return (
     <Grid container spacing={4}>
@@ -28,4 +35,4 @@ function Board({ data }) {
   )
 }
 
-export default memo(Board)
+export default memo(Board);

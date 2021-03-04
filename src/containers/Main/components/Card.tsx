@@ -1,13 +1,14 @@
-import React, { memo } from 'react'
-//import PropTypes from 'prop-types'
+import React, { memo } from 'react';
 import { Card as CardUI } from '../../../components'
-import {
-  LabelStyled,
-  ValueStyled,
-  CardContentStyled
-} from './style'
+import { LabelStyled, ValueStyled, CardContentStyled } from './style';
 
-function Card({ value, label, color }) {
+interface PropsList {
+  value: any;
+  label: any;
+  color: any;
+}
+
+function Card({ value, label, color }:PropsList) {
   return (
     <CardUI>
       <CardContentStyled color={color}>
@@ -18,4 +19,4 @@ function Card({ value, label, color }) {
   )
 }
 
-export default memo(Card)
+export default memo(Card);

@@ -3,12 +3,20 @@ import { Card, Typography, Button, Select, MenuItem } from '../../../components'
 import COUNTRIES from '../../../commons/constants/countries';
 import { CardPanelContentStyled, ItemStyled } from './style';
 
-const navigatorHasShare = navigator.share
+const navigatorHasShare = navigator.share;
 
-function Panel({ updateAt, onChange, data, country, getCoviddata }) {
+interface PanelParams {
+  updateAt: any; 
+  onChange: any; 
+  data: any; 
+  country: any; 
+  getCoviddata: any;
+}
+
+function Panel({ updateAt, onChange, data, country }:PanelParams) {
   const recovered = data;
 
-  const renderCountries = (country, index) => (
+  const renderCountries = (country: any, index: any) => (
     <MenuItem key={`country-${index}`} value={country.value}>
       <ItemStyled>
         <div>{country.label}</div>
@@ -17,11 +25,8 @@ function Panel({ updateAt, onChange, data, country, getCoviddata }) {
     </MenuItem>
   )
 
-  const textCovid19 = `País: ${country} - recuperados: ${recovered}`
-
-  const copyInfo = () => {
-    navigator.clipboard.writeText(textCovid19)
-  }
+  const textCovid19 = `País: ${country} - recuperados: ${recovered}`;
+  const copyInfo = () => navigator.clipboard.writeText(textCovid19);
 
   const shareInfo = () => {
     navigator.share({
@@ -56,11 +61,11 @@ function Panel({ updateAt, onChange, data, country, getCoviddata }) {
           <Typography variant="body2" component="span" color="primary">Atualizado em: {updateAt}</Typography>
           <div className="pt-2">
             <Select onChange={onChange} value={country}>
-              {COUNTRIES.map(renderCountries)}
+            {COUNTRIES.map(renderCountries)}
             </Select>
           </div>
         </div>
-        {navigatorHasShare ? renderShareButton : renderCopyButton}
+        {navigatorHasShare() ? renderShareButton : renderCopyButton}
       </CardPanelContentStyled>
     </Card>
   )

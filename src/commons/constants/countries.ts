@@ -1,8 +1,9 @@
-import BrazilFlag from '../../assets/images/brazil.png'
-import ChinaFlag from '../../assets/images/china.png'
-import GermanyFlag from '../../assets/images/germany.png'
-import ItalyFlag from '../../assets/images/italy.png'
-import UsaFlag from '../../assets/images/usa.png'
+import BrazilFlag from '../../assets/images/brazil.png';
+import ChinaFlag from '../../assets/images/china.png';
+import GermanyFlag from '../../assets/images/germany.png';
+import ItalyFlag from '../../assets/images/italy.png';
+import UsaFlag from '../../assets/images/usa.png';
+
 
 const COUNTRIES = [
   {
@@ -32,4 +33,4 @@ const COUNTRIES = [
   }
 ]
 
-export default COUNTRIES
+export default COUNTRIES;

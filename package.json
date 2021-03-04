@@ -8,12 +8,14 @@
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
+    "@types/styled-components": "^5.1.7",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-scripts": "3.4.1",
     "styled-components": "^5.1.0"
   },
   "scripts": {
+    "dev": "npm run start",
     "start": "react-app-rewired start",
     "build": "react-app-rewired build",
     "eslint": "eslint --ext .jsx,.js src"
@@ -34,6 +36,7 @@
     ]
   },
   "devDependencies": {
+    "@types/customize-cra": "^1.0.0",
     "customize-cra": "^0.9.1",
     "react-app-rewired": "^2.1.5"
   }
