@@ -1,4 +1,4 @@
-## Mapeando dados de países com covid
+## Mapeando dados de covid com React
 
 #### Tecnologias
 - Reactjs
