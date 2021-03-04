@@ -1,5 +1,10 @@
-## PROJETO FEITO COM O O CURSO DA DIGITAL INNOVATION ONE
+## Mapeando dados de países com covid
 
-* Ensinamentos sobre boas práticas e conceitos avançados de React.js
+#### Tecnologias
+- Reactjs
+- Typescript 
+- Material UI
+- styled-components
 
-Aluno: Luiz Lima
+
+Projeto em andamento
